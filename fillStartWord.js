@@ -4,8 +4,11 @@ function fillStartWord(startWord, word) {
   //code here
     if (word==null && word== undefined){
         return undefined
-    } else {
+    } else if (startWord === word.slice(0,startWord.length)) {
+        return word
+    }else {
         return startWord+word
     }
+
 }
 module.exports = fillStartWord
